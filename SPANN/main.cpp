@@ -49,7 +49,7 @@ int main(int argc, char *argv[]) {
     watchSolutionOnce(getpid(), usedMemory);
     save_time(endProg_baseline);
     double usedTime = calc_time(begProg_baseline, endProg_baseline);
-    printf("violence %.6lf %d\n", usedTime, usedMemory/1024);
+    printf("LinearScan %.6lf %d\n", usedTime, usedMemory/1024);
 #endif
     index = 0, usedMemory = 0;
 #ifdef __linux__
@@ -65,7 +65,7 @@ int main(int argc, char *argv[]) {
     watchSolutionOnce(getpid(), usedMemory);
     save_time(endProg);
     usedTime = calc_time(begProg, endProg);
-    printf("priority_queue %.6lf %d\n", usedTime, usedMemory/1024);
+    printf("HeapKNN %.6lf %d\n", usedTime, usedMemory/1024);
 #endif
     //cout << "query result: " << reader.is_same(reader.priority_queue_vector, reader.brute_force_vector) << "\n";
     file.close();

@@ -25,7 +25,7 @@ def generateData():
         tmp = copy.deepcopy(default)
         for i in range(len(lst)):
             tmp[no] = lst[i]
-            tmpPath = f'./tmp/{key}_{i}_param_{tmp[0]}_{tmp[1]}_{tmp[2]}_{tmp[3]}'
+            tmpPath = f'../SPANN/data/{key}_{i}_param_{tmp[0]}_{tmp[1]}_{tmp[2]}_{tmp[3]}'
             if not os.path.exists(tmpPath):
                 os.mkdir(tmpPath)
             tmpFilePath = tmpPath + '/data_0.dat'
