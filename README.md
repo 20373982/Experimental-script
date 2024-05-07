@@ -1,4 +1,4 @@
-# General Scripts for Experimental Evaluation
+# Commonly-Used Scripts for Experimental Evaluation
 
 ### Environment
 
@@ -10,7 +10,7 @@ cmake version: 3.22.1
 
 OS: Ubuntu 18.04.4 LTS
 
-### Description about the datasets
+### Description about the Dataset
 
 #### Dataset: enron.zip
 
@@ -29,23 +29,56 @@ cd SPANN
 unzip -d enron enron.zip
 ```
 
-The command **unzip -d** will create a new directory, "SPANN/enron", to contain two files: **enron_dataset.txt** and **enron_query.txt**.
+The **unzip -d** command  will create a new directory, "SPANN/enron", to contain two files: **enron_dataset.txt** and **enron_query.txt**.
 
+#### Generate the query parameter file
 
+Run the following commands in Linux:
 
-### Usage of the Scripts
+```
+cd batchRun
+mkdir ../SPANN/data
+python generate_data_0.py
+```
 
+This **generate_data_0.py** file will generate the experimental parameter settings for queries. 
+After running the commands, there will be several directories in the path **../SPANN/data/**, and there will be one file **data_0.dat** that contains the parameter setting in each directory.
 
-Object code ：./SPANN
+### Test All Parameter Settings by Scripts
 
+#### Compile the algorithm, SPANN
 
-Script code ：cd batchRun
+Run the following commands in Linux:
 
-Script code ： python generate_data_0.py    --  generate batch experiment parameters
+```
+cd SPANN
+cmake .
+make
+```
 
-​						  mv ./tmp/* ../SPANN/realData/    --  move the parameters to the object code dir
+The **cmake** command  will create the **Makefile**, and the **make** command will compile the algorithm and produce an executable program called **SPANN**.
 
-​						  python runRealData.py    --  run object code in batches
+#### Test the query parameters in parallel by scripts
 
-​						  ipython .\figure_draw.ipynb    --  draw
+Run the following commands in Linux:
+
+```
+cd batchRun
+mkdir ../SPANN/result
+python runRealData.py
+```
+
+This **runRealData.py** file will run the experimental test based on the parameter settings for queries. 
+After running the command, there will be several directories in the path **../SPANN/result/SPANN**, and there will be one file **data_0.dat** that contains the experimental result that corresponds to the specific parameter setting in each directory.
+
+#### Draw the figures of experimental results
+
+Run the following command:
+
+```
+cd batchRun
+ipython ./figure_draw.ipynb
+```
+
+Or, you can directly open the **figure_draw.ipynb** file through **Jupyter Notebook** or **Visual Studio Code**.
 
