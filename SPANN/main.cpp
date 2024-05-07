@@ -41,7 +41,7 @@ int main(int argc, char *argv[]) {
     save_time(begProg_baseline);
 #endif
     while (getline(file_baseline, query)) {
-        reader.get_nearest_neighbors_violence(query, k, usedMemory);
+        reader.get_nearest_neighbors_brute_force(query, k, usedMemory);
         index++;
         if (index == n) break;
     }
@@ -67,7 +67,7 @@ int main(int argc, char *argv[]) {
     usedTime = calc_time(begProg, endProg);
     printf("priority_queue %.6lf %d\n", usedTime, usedMemory/1024);
 #endif
-    //cout << "query result: " << reader.is_same(reader.priority_queue_vector, reader.violence_vector) << "\n";
+    //cout << "query result: " << reader.is_same(reader.priority_queue_vector, reader.brute_force_vector) << "\n";
     file.close();
     file_baseline.close();
     return 0;

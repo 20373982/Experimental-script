@@ -19,7 +19,7 @@ class read_vector {
 public:
 
     vector<float> priority_queue_vector;
-    vector<float> violence_vector;
+    vector<float> brute_force_vector;
     int dim;
 
     explicit read_vector(const string &filename, const int dim, const int N) {
@@ -71,7 +71,7 @@ public:
         this->get_used_memory(usedMemory);
     }
 
-    void get_nearest_neighbors_violence(string q, int k, int& usedMemory, bool out = false) {
+    void get_nearest_neighbors_brute_force(string q, int k, int& usedMemory, bool out = false) {
         // 解析查询向量
         vector<float> vq = this->parse_query(q);
         // 遍历vectors获取距离
@@ -89,7 +89,7 @@ public:
         // 输出distances中的前k个向量
         for (int i = 0; i < k; i++) {
             vector<float> vec = vectors[distances[i].second];
-            this->violence_vector.push_back(distances[i].first);
+            this->brute_force_vector.push_back(distances[i].first);
             // 输出vec中的每个浮点数，以空格分隔
             if (out) {
                 print_vector(vec);

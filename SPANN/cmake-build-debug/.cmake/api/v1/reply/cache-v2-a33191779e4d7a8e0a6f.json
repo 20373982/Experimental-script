@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "d:/C++ plus/SPANN_simulate/SPANN/cmake-build-debug"
+			"value" : "d:/C++ plus/Experimental-script/SPANN/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -623,7 +623,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "D:/C++ plus/SPANN_simulate/SPANN"
+			"value" : "D:/C++ plus/Experimental-script/SPANN"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1239,7 +1239,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/C++ plus/SPANN_simulate/SPANN/cmake-build-debug"
+			"value" : "D:/C++ plus/Experimental-script/SPANN/cmake-build-debug"
 		},
 		{
 			"name" : "SPANN_IS_TOP_LEVEL",
@@ -1263,7 +1263,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "D:/C++ plus/SPANN_simulate/SPANN"
+			"value" : "D:/C++ plus/Experimental-script/SPANN"
 		}
 	],
 	"kind" : "cache",

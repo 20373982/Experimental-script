@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "D:/C++ plus/SPANN_simulate/SPANN/cmake-build-debug",
-		"source" : "D:/C++ plus/SPANN_simulate/SPANN"
+		"build" : "D:/C++ plus/Experimental-script/SPANN/cmake-build-debug",
+		"source" : "D:/C++ plus/Experimental-script/SPANN"
 	},
 	"version" : 
 	{
