@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="810c6907-a5d4-4f6c-b789-016f215c07ec" name="DBA" url="http://43.140.219.171">
+        <fileTransfer rootFolder="/home/zzlin" accessType="SFTP" host="43.140.219.171" port="1135" sshConfigId="412362b7-1853-41c9-adba-a822ba09f380" sshConfig="zzlin@43.140.219.171:1135 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
